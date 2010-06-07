@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{REQUEST_URI} !/cgi-bin
+RewriteRule ^(.*\.text)$ /cgi-bin/md.cgi/$1 [L,QSA]
